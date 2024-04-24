@@ -168,7 +168,6 @@ if campaign_ids_pca:
 else:
     print("No campaigns found")
 
-exit()
 
 
 
