@@ -168,6 +168,7 @@ if campaign_ids_pca:
 else:
     print("No campaigns found")
 
+# exit()
 
 
 
@@ -217,30 +218,28 @@ for campaign_id_pca in campaign_ids_pca:
     ###########################support_pca####################
     
     cookies_x = {
-        'DID': 'cltfsxlmh69cj0x080ko71pv7',
-        '_ga': 'GA1.1.1167863333.1709729726',
-        'T': 'TI171041253423100159177482711189994566661456194141317532355081987438',
-        'rt': 'null',
-        'K-ACTION': 'null',
-        '_pxvid': '97877fb5-e1ee-11ee-848c-42c3808d2940',
-        'ud': '2.YOKqx9JHMp80DdNjUKLH8U41oHBcoHPB5mN02Nb5emkAYdJcMgXK4424tSMYFXzDVcNITmD0Y-b7uPgpErfcMZ2sqO3f_ExMRGrbM-dykk_WjWsgg5XT7cdxVZNmhBNGkrcQGcewPYOraoPf_NDsxQ',
-        'vh': '607',
-        'vw': '1366',
-        'dpr': '1',
-        'CURRENT_TENANT': 'BSS',
-        '_csrf': 'pxTCMbPA-LkqH17yl01k1Svh',
-        'TENANT': 'BSS',
-        'SN': 'VI5D0D308D80BD426BA7BB0F3688BC1F65.TOKB156577FC0134B2992D214D88AEE5E71.1713523730.LO',
-        'at': 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6ImQ2Yjk5NDViLWZmYTEtNGQ5ZC1iZDQyLTFkN2RmZTU4ZGNmYSJ9.eyJleHAiOjE3MTUyNTE3MzAsImlhdCI6MTcxMzUyMzczMCwiaXNzIjoia2V2bGFyIiwianRpIjoiYTVhMzFmYTctM2FiNy00NzkwLWJhNDItMTZkNWJhNGRjMzM3IiwidHlwZSI6IkFUIiwiZElkIjoiVEkxNzEwNDEyNTM0MjMxMDAxNTkxNzc0ODI3MTExODk5OTQ1NjY2NjE0NTYxOTQxNDEzMTc1MzIzNTUwODE5ODc0MzgiLCJrZXZJZCI6IlZJNUQwRDMwOEQ4MEJENDI2QkE3QkIwRjM2ODhCQzFGNjUiLCJ0SWQiOiJtYXBpIiwidnMiOiJMTyIsInoiOiJIWUQiLCJtIjp0cnVlLCJnZW4iOjR9.QgJyhc6zJ9eczZkzgxcJ_RTwLjUZ-9yGn8w_Lvauj7A',
-        'vd': 'VI5D0D308D80BD426BA7BB0F3688BC1F65-1710412536056-4.1713523730.1713523730.153884413',
-        'pxcts': '68c93d81-fe3a-11ee-9bdf-782a4a118d40',
-        'AMCVS_17EB401053DAF4840A490D4C%40AdobeOrg': '1',
-        'AMCV_17EB401053DAF4840A490D4C%40AdobeOrg': '-227196251%7CMCIDTS%7C19833%7CMCMID%7C27540310070417555930568187461838119454%7CMCAAMLH-1714128531%7C12%7CMCAAMB-1714128531%7CRKhpRz8krg2tLO6pguXWp5olkAcUniQYPHaMWWgdJ3xzPWQmdj0y%7CMCOPTOUT-1713530931s%7CNONE%7CMCAID%7CNONE',
-        'S': 'd1t18JD89Zz8KWGdkLz8/ej8/IVDTCbPIVn0qhzRK83rmeJSgnVUSMglHDJ2VxgFLNbGdfhS2vke2CuQbHvdIaRZTpQ==',
-        'BSS_SID': 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6IjA1MGRjYzRjLTE0MGYtNDNkYy1iYTUzLTM2NTY3MTQ3MWVlZSJ9.eyJleHAiOjE3MTM1Mjc3NDQsImlhdCI6MTcxMzUyNTk0NCwiaXNzIjoia2V2bGFyIiwianRpIjoiZTE4OGZkYTEtNDI2NC00MTMwLTgxOTctZjZiNWFiYWU1NGEwIiwidHlwZSI6IkFUIiwiZElkIjoiY2x0ZnN4bG1oNjljajB4MDgwa283MXB2NyIsImJJZCI6IjZNRkkwMiIsImtldklkIjoiVklBNDY5MjZFMTc3RjQ0NDhDODFGMDVCRjlCOUE2RDFFNCIsInRJZCI6ImFkc191aSIsImVhSWQiOiJJRDF6b1dKMmIzUV9OOUtBbjJ5Q0dUbHFpYl85TnR2aWRmeDY4M2Y5X1NrPSIsInZzIjoiTEkiLCJ6IjoiQ0giLCJtIjpmYWxzZSwiZ2VuIjo0fQ.kPPyPCT_b2rFJYCbKNzYB0uH2a8A-yB4JnEeheLqXoQ',
-        'BSS_UDT': 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImFzaHV0b3NoLnNodWtsYUB0cmFpbHl0aWNzLmNvbSIsImZpcnN0TmFtZSI6IkFzaHV0b3NoIFNodWtsYSIsIm1vYmlsZSI6Ijg5NjI2MzA3ODEiLCJzdGF0ZSI6IlZFUklGSUVEIiwidmFsaWRTZXNzaW9uIjp0cnVlLCJ0ZW5hbnQiOiJCU1MiLCJpYXQiOjE3MTM1MjYyNzcsImV4cCI6MTcxMzUyNjg3N30.iCfC90S8eY2RzDJhTKB2Ww-128byDKFLujwxfNToRek',
-        'nonce': 'ss-2899789514',
-        '_ga_ZPGRNTNNRT': 'GS1.1.1713515946.8.1.1713526478.0.0.0',
+    'DID': 'cltfsxlmh69cj0x080ko71pv7',
+    '_ga': 'GA1.1.1167863333.1709729726',
+    'T': 'TI171041253423100159177482711189994566661456194141317532355081987438',
+    'rt': 'null',
+    'K-ACTION': 'null',
+    '_pxvid': '97877fb5-e1ee-11ee-848c-42c3808d2940',
+    'ud': '2.YOKqx9JHMp80DdNjUKLH8U41oHBcoHPB5mN02Nb5emkAYdJcMgXK4424tSMYFXzDVcNITmD0Y-b7uPgpErfcMZ2sqO3f_ExMRGrbM-dykk_WjWsgg5XT7cdxVZNmhBNGkrcQGcewPYOraoPf_NDsxQ',
+    'vh': '607',
+    'vw': '1366',
+    'dpr': '1',
+    'SN': 'VI5D0D308D80BD426BA7BB0F3688BC1F65.TOKB156577FC0134B2992D214D88AEE5E71.1713523730.LO',
+    'at': 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6ImQ2Yjk5NDViLWZmYTEtNGQ5ZC1iZDQyLTFkN2RmZTU4ZGNmYSJ9.eyJleHAiOjE3MTUyNTE3MzAsImlhdCI6MTcxMzUyMzczMCwiaXNzIjoia2V2bGFyIiwianRpIjoiYTVhMzFmYTctM2FiNy00NzkwLWJhNDItMTZkNWJhNGRjMzM3IiwidHlwZSI6IkFUIiwiZElkIjoiVEkxNzEwNDEyNTM0MjMxMDAxNTkxNzc0ODI3MTExODk5OTQ1NjY2NjE0NTYxOTQxNDEzMTc1MzIzNTUwODE5ODc0MzgiLCJrZXZJZCI6IlZJNUQwRDMwOEQ4MEJENDI2QkE3QkIwRjM2ODhCQzFGNjUiLCJ0SWQiOiJtYXBpIiwidnMiOiJMTyIsInoiOiJIWUQiLCJtIjp0cnVlLCJnZW4iOjR9.QgJyhc6zJ9eczZkzgxcJ_RTwLjUZ-9yGn8w_Lvauj7A',
+    'vd': 'VI5D0D308D80BD426BA7BB0F3688BC1F65-1710412536056-4.1713523730.1713523730.153884413',
+    'AMCV_17EB401053DAF4840A490D4C%40AdobeOrg': '-227196251%7CMCIDTS%7C19833%7CMCMID%7C27540310070417555930568187461838119454%7CMCAAMLH-1714128531%7C12%7CMCAAMB-1714128531%7CRKhpRz8krg2tLO6pguXWp5olkAcUniQYPHaMWWgdJ3xzPWQmdj0y%7CMCOPTOUT-1713530931s%7CNONE%7CMCAID%7CNONE',
+    'S': 'd1t18JD89Zz8KWGdkLz8/ej8/IVDTCbPIVn0qhzRK83rmeJSgnVUSMglHDJ2VxgFLNbGdfhS2vke2CuQbHvdIaRZTpQ==',
+    'CURRENT_TENANT': 'BSS',
+    '_csrf': 'pKnOAujD-r1UIUmLzelEldC7',
+    'TENANT': 'BSS',
+    'BSS_SID': 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6ImQxZWI3YWU1LTllNmUtNGMxNi04ZjM1LTVlYWJhOGNiYzMyZCJ9.eyJleHAiOjE3MTM5NjkyOTgsImlhdCI6MTcxMzk2NzQ5OCwiaXNzIjoia2V2bGFyIiwianRpIjoiN2VlOWQ5ZDctMDZkMS00YzRmLTliY2EtYThlYzRjY2I1N2YxIiwidHlwZSI6IkFUIiwiZElkIjoiY2x0ZnN4bG1oNjljajB4MDgwa283MXB2NyIsImJJZCI6IkswRlVIVCIsImtldklkIjoiVkk4RTRENTA0MEQwQjA0MDZFQjVGOEVFREU1OTk3NzU3NiIsInRJZCI6ImFkc191aSIsImVhSWQiOiJXMHlCbURjN01OVzd1VzBqN1JfYWZKTHYtdGxsMmw5bm4taGw2SU5xR2xnPSIsInZzIjoiTEkiLCJ6IjoiQ0giLCJtIjpmYWxzZSwiZ2VuIjo0fQ.yxcoHC_vNwLnQoc03O7xATOb-dkIiNjxjfAVJGXOjHI',
+    'BSS_UDT': 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImFzaHV0b3NoLnNodWtsYUB0cmFpbHl0aWNzLmNvbSIsImZpcnN0TmFtZSI6IkFzaHV0b3NoIFNodWtsYSIsIm1vYmlsZSI6Ijg5NjI2MzA3ODEiLCJzdGF0ZSI6IlZFUklGSUVEIiwidmFsaWRTZXNzaW9uIjp0cnVlLCJ0ZW5hbnQiOiJCU1MiLCJpYXQiOjE3MTM5Njc0OTgsImV4cCI6MTcxMzk2ODA5OH0.eWukjm31MdY9whxJ5j7mS_Xze5NkXdMP7RYg2dvObiQ',
+    '_ga_ZPGRNTNNRT': 'GS1.1.1713967498.22.1.1713967526.0.0.0',
+    'nonce': 'ss-2575131102',
     }
 
     for key in cookie_dict.keys():
@@ -248,48 +247,48 @@ for campaign_id_pca in campaign_ids_pca:
             cookies_x[key] = cookie_dict[key]
 
     headers = {
-        'Accept-Language': 'en-GB,en-US;q=0.9,en;q=0.8',
-        'Connection': 'keep-alive',
-        # 'Cookie': 'DID=cltfsxlmh69cj0x080ko71pv7; _ga=GA1.1.1167863333.1709729726; T=TI171041253423100159177482711189994566661456194141317532355081987438; rt=null; K-ACTION=null; _pxvid=97877fb5-e1ee-11ee-848c-42c3808d2940; ud=2.YOKqx9JHMp80DdNjUKLH8U41oHBcoHPB5mN02Nb5emkAYdJcMgXK4424tSMYFXzDVcNITmD0Y-b7uPgpErfcMZ2sqO3f_ExMRGrbM-dykk_WjWsgg5XT7cdxVZNmhBNGkrcQGcewPYOraoPf_NDsxQ; vh=607; vw=1366; dpr=1; CURRENT_TENANT=BSS; _csrf=pxTCMbPA-LkqH17yl01k1Svh; TENANT=BSS; SN=VI5D0D308D80BD426BA7BB0F3688BC1F65.TOKB156577FC0134B2992D214D88AEE5E71.1713523730.LO; at=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6ImQ2Yjk5NDViLWZmYTEtNGQ5ZC1iZDQyLTFkN2RmZTU4ZGNmYSJ9.eyJleHAiOjE3MTUyNTE3MzAsImlhdCI6MTcxMzUyMzczMCwiaXNzIjoia2V2bGFyIiwianRpIjoiYTVhMzFmYTctM2FiNy00NzkwLWJhNDItMTZkNWJhNGRjMzM3IiwidHlwZSI6IkFUIiwiZElkIjoiVEkxNzEwNDEyNTM0MjMxMDAxNTkxNzc0ODI3MTExODk5OTQ1NjY2NjE0NTYxOTQxNDEzMTc1MzIzNTUwODE5ODc0MzgiLCJrZXZJZCI6IlZJNUQwRDMwOEQ4MEJENDI2QkE3QkIwRjM2ODhCQzFGNjUiLCJ0SWQiOiJtYXBpIiwidnMiOiJMTyIsInoiOiJIWUQiLCJtIjp0cnVlLCJnZW4iOjR9.QgJyhc6zJ9eczZkzgxcJ_RTwLjUZ-9yGn8w_Lvauj7A; vd=VI5D0D308D80BD426BA7BB0F3688BC1F65-1710412536056-4.1713523730.1713523730.153884413; pxcts=68c93d81-fe3a-11ee-9bdf-782a4a118d40; AMCVS_17EB401053DAF4840A490D4C%40AdobeOrg=1; AMCV_17EB401053DAF4840A490D4C%40AdobeOrg=-227196251%7CMCIDTS%7C19833%7CMCMID%7C27540310070417555930568187461838119454%7CMCAAMLH-1714128531%7C12%7CMCAAMB-1714128531%7CRKhpRz8krg2tLO6pguXWp5olkAcUniQYPHaMWWgdJ3xzPWQmdj0y%7CMCOPTOUT-1713530931s%7CNONE%7CMCAID%7CNONE; S=d1t18JD89Zz8KWGdkLz8/ej8/IVDTCbPIVn0qhzRK83rmeJSgnVUSMglHDJ2VxgFLNbGdfhS2vke2CuQbHvdIaRZTpQ==; BSS_SID=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6IjA1MGRjYzRjLTE0MGYtNDNkYy1iYTUzLTM2NTY3MTQ3MWVlZSJ9.eyJleHAiOjE3MTM1Mjc3NDQsImlhdCI6MTcxMzUyNTk0NCwiaXNzIjoia2V2bGFyIiwianRpIjoiZTE4OGZkYTEtNDI2NC00MTMwLTgxOTctZjZiNWFiYWU1NGEwIiwidHlwZSI6IkFUIiwiZElkIjoiY2x0ZnN4bG1oNjljajB4MDgwa283MXB2NyIsImJJZCI6IjZNRkkwMiIsImtldklkIjoiVklBNDY5MjZFMTc3RjQ0NDhDODFGMDVCRjlCOUE2RDFFNCIsInRJZCI6ImFkc191aSIsImVhSWQiOiJJRDF6b1dKMmIzUV9OOUtBbjJ5Q0dUbHFpYl85TnR2aWRmeDY4M2Y5X1NrPSIsInZzIjoiTEkiLCJ6IjoiQ0giLCJtIjpmYWxzZSwiZ2VuIjo0fQ.kPPyPCT_b2rFJYCbKNzYB0uH2a8A-yB4JnEeheLqXoQ; BSS_UDT=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImFzaHV0b3NoLnNodWtsYUB0cmFpbHl0aWNzLmNvbSIsImZpcnN0TmFtZSI6IkFzaHV0b3NoIFNodWtsYSIsIm1vYmlsZSI6Ijg5NjI2MzA3ODEiLCJzdGF0ZSI6IlZFUklGSUVEIiwidmFsaWRTZXNzaW9uIjp0cnVlLCJ0ZW5hbnQiOiJCU1MiLCJpYXQiOjE3MTM1MjYyNzcsImV4cCI6MTcxMzUyNjg3N30.iCfC90S8eY2RzDJhTKB2Ww-128byDKFLujwxfNToRek; nonce=ss-2899789514; _ga_ZPGRNTNNRT=GS1.1.1713515946.8.1.1713526478.0.0.0',
-        'Origin': 'https://advertising.flipkart.com',
-        'Referer': 'https://advertising.flipkart.com/ad-account/campaigns/pca/0KFZD30K1Y2F/edit?baccount=org-9J4HV93IJV&aaccount=4616HEEMH03Q',
-        'Sec-Fetch-Dest': 'empty',
-        'Sec-Fetch-Mode': 'cors',
-        'Sec-Fetch-Site': 'same-origin',
-        'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36',
-        'accept': '*/*',
-        'apollographql-client-name': 'Flipkart-Ads',
-        'apollographql-client-version': '1.0.0',
-        'content-type': 'application/json',
-        'downlink': '10',
-        'dpr': '1',
-        'sec-ch-ua': '"Chromium";v="124", "Google Chrome";v="124", "Not-A.Brand";v="99"',
-        'sec-ch-ua-mobile': '?0',
-        'sec-ch-ua-platform': '"Windows"',
-        'viewport-width': '952',
-        'x-aaccount': '4616HEEMH03Q',
-        'x-baccount': 'org-9J4HV93IJV',
-        'x-csrf-token': '09I13gAj-1V1ZcxgXsN5PwSF7-lDYo3SPQSE',
-        'x-sourceurl': 'https://advertising.flipkart.com/ad-account/campaigns/pca/0KFZD30K1Y2F/edit?baccount=org-9J4HV93IJV&aaccount=4616HEEMH03Q',
-        'x-tenant': 'BSS',
-    }
-    
-    
-    json_data = {
-        'operationName': 'GetCampaign',
-        'variables': {
-            'seller': False,
-            'adProduct': 'BRAND_PCA',
-            'id': campaign_id_pca,  #pass campaignId
-        },
-        'query': 'query GetCampaign($id: String!, $adProduct: String!, $seller: Boolean! = false) {\n  getCampaignForId(id: $id, adProduct: $adProduct) {\n    ... on CampaignPLAResponse {\n      campaignInfo {\n        id\n        type\n        name\n        status\n        uiStatus\n        currency\n        paymentType\n        budget\n        budgetType\n        fsnIds\n        startDate\n        endDate\n        costModel\n        marketplace\n        pacing\n        withPreferredSellers\n        preferredSellerIds\n        preferredSellerNames\n        businessZones\n        tillBudgetEnds\n        fsnMeta {\n          id\n          title\n          image\n          minListingPrice\n          maxListingPrice\n          listingCurrency\n          brand\n          storeList\n          __typename\n        }\n        __typename\n      }\n      adGroups {\n        id\n        name\n        status\n        productCount\n        commodityId\n        cost\n        budget\n        targeting {\n          type\n          pages\n          excludeKeywords {\n            q\n            r\n            __typename\n          }\n          includeKeywords {\n            q\n            r\n            matchType\n            __typename\n          }\n          __typename\n        }\n        storePaths\n        fsnBanners {\n          id\n          fsnId\n          __typename\n        }\n        costVariation {\n          ...PlacementsFragment\n          __typename\n        }\n        __typename\n      }\n      brandIds\n      preferredSellers {\n        alias\n        sellerId\n        __typename\n      }\n      placementsMetaInfo {\n        ...PlacementsMetaInfoFragement\n        __typename\n      }\n      __typename\n    }\n    ... on CampaignPCAResponse {\n      campaignInfo {\n        id\n        type\n        name\n        status\n        uiStatus\n        currency\n        paymentType\n        budget\n        budgetType\n        startDate\n        endDate\n        costModel\n        marketplace\n        __typename\n      }\n      adGroups {\n        id\n        name\n        status\n        uiStatus\n        startDate\n        endDate\n        cost\n        budget\n        excludeKeywords\n        marketplace\n        showAdInBroadMatchStores\n        costVariation {\n          ...PlacementsFragment\n          __typename\n        }\n        allowedActions\n        pacing\n        targeting {\n          type\n          pages\n          excludeKeywords {\n            q\n            r\n            __typename\n          }\n          includeKeywords {\n            q\n            r\n            matchType\n            __typename\n          }\n          __typename\n        }\n        contents {\n          contentId\n          creativeBanners {\n            creativeId\n            creativeName\n            creativeTemplateId\n            uiStatus\n            status\n            allowedActions\n            referenceId\n            mediaId\n            creativeType\n            assets {\n              macro\n              value\n              type\n              origin\n              assetId\n              subAssets {\n                macro\n                value\n                type\n                __typename\n              }\n              __typename\n            }\n            isSelected\n            id\n            language\n            __typename\n          }\n          collectionUrl\n          landingPageUrl\n          collectionId\n          collectionType\n          brands\n          stores {\n            storeId\n            storeName\n            __typename\n          }\n          rejectedCount\n          isPreferredSeller\n          creativeTemplateId\n          __typename\n        }\n        __typename\n      }\n      brandIds\n      placementsMetaInfo {\n        ...PlacementsMetaInfoFragement\n        __typename\n      }\n      __typename\n    }\n    ... on CampaignDisplayAdsResponse {\n      campaignInfo {\n        id\n        type\n        name\n        status\n        uiStatus\n        currency\n        paymentType\n        budget\n        startDate\n        endDate\n        costModel\n        marketplace\n        pacing\n        budgetType\n        adFormat\n        publisher\n        __typename\n      }\n      adGroups {\n        id\n        name\n        status\n        uiStatus\n        startDate\n        endDate\n        cost\n        budget\n        allowedActions\n        marketplace\n        pacing\n        contents {\n          contentId\n          creativeBanners {\n            creativeId\n            creativeName\n            uiStatus\n            status\n            allowedActions\n            referenceId\n            mediaId\n            videoMediaStatus\n            creativeType\n            assets {\n              macro\n              value\n              type\n              origin\n              subAssets {\n                macro\n                value\n                type\n                __typename\n              }\n              isSystemAsset\n              __typename\n            }\n            isSelected\n            id\n            __typename\n          }\n          collectionUrl\n          collectionId\n          collectionType\n          brands\n          stores {\n            storeId\n            storeName\n            __typename\n          }\n          rejectedCount\n          isUrlSystemCreated\n          landingPageUrl\n          status\n          isPreferredSeller\n          __typename\n        }\n        frequencyCapping {\n          interval\n          value\n          numberOfIntervals\n          __typename\n        }\n        customScheduling\n        channels\n        userTargetingExpression {\n          groupId\n          type\n          values\n          publisherSpecific\n          __typename\n        }\n        contextTargetingExpression {\n          groupId\n          type\n          values\n          publisherSpecific\n          __typename\n        }\n        __typename\n      }\n      brandIds\n      __typename\n    }\n    __typename\n  }\n  getAdAccountDetails @skip(if: $seller) {\n    marketplaceConfigurationResponse {\n      marketplaceList\n      __typename\n    }\n    __typename\n  }\n}\n\nfragment PlacementsFragment on CostVariationType {\n  placements {\n    absoluteCost\n    percentage\n    type\n    pageType\n    __typename\n  }\n  __typename\n}\n\nfragment PlacementsMetaInfoFragement on PlacementsMeta {\n  type\n  title\n  detail\n  pageType\n  __typename\n}\n',
+    'Accept-Language': 'en-GB,en-US;q=0.9,en;q=0.8',
+    'Connection': 'keep-alive',
+    # 'Cookie': 'DID=cltfsxlmh69cj0x080ko71pv7; _ga=GA1.1.1167863333.1709729726; T=TI171041253423100159177482711189994566661456194141317532355081987438; rt=null; K-ACTION=null; _pxvid=97877fb5-e1ee-11ee-848c-42c3808d2940; ud=2.YOKqx9JHMp80DdNjUKLH8U41oHBcoHPB5mN02Nb5emkAYdJcMgXK4424tSMYFXzDVcNITmD0Y-b7uPgpErfcMZ2sqO3f_ExMRGrbM-dykk_WjWsgg5XT7cdxVZNmhBNGkrcQGcewPYOraoPf_NDsxQ; vh=607; vw=1366; dpr=1; SN=VI5D0D308D80BD426BA7BB0F3688BC1F65.TOKB156577FC0134B2992D214D88AEE5E71.1713523730.LO; at=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6ImQ2Yjk5NDViLWZmYTEtNGQ5ZC1iZDQyLTFkN2RmZTU4ZGNmYSJ9.eyJleHAiOjE3MTUyNTE3MzAsImlhdCI6MTcxMzUyMzczMCwiaXNzIjoia2V2bGFyIiwianRpIjoiYTVhMzFmYTctM2FiNy00NzkwLWJhNDItMTZkNWJhNGRjMzM3IiwidHlwZSI6IkFUIiwiZElkIjoiVEkxNzEwNDEyNTM0MjMxMDAxNTkxNzc0ODI3MTExODk5OTQ1NjY2NjE0NTYxOTQxNDEzMTc1MzIzNTUwODE5ODc0MzgiLCJrZXZJZCI6IlZJNUQwRDMwOEQ4MEJENDI2QkE3QkIwRjM2ODhCQzFGNjUiLCJ0SWQiOiJtYXBpIiwidnMiOiJMTyIsInoiOiJIWUQiLCJtIjp0cnVlLCJnZW4iOjR9.QgJyhc6zJ9eczZkzgxcJ_RTwLjUZ-9yGn8w_Lvauj7A; vd=VI5D0D308D80BD426BA7BB0F3688BC1F65-1710412536056-4.1713523730.1713523730.153884413; AMCV_17EB401053DAF4840A490D4C%40AdobeOrg=-227196251%7CMCIDTS%7C19833%7CMCMID%7C27540310070417555930568187461838119454%7CMCAAMLH-1714128531%7C12%7CMCAAMB-1714128531%7CRKhpRz8krg2tLO6pguXWp5olkAcUniQYPHaMWWgdJ3xzPWQmdj0y%7CMCOPTOUT-1713530931s%7CNONE%7CMCAID%7CNONE; S=d1t18JD89Zz8KWGdkLz8/ej8/IVDTCbPIVn0qhzRK83rmeJSgnVUSMglHDJ2VxgFLNbGdfhS2vke2CuQbHvdIaRZTpQ==; CURRENT_TENANT=BSS; _csrf=pKnOAujD-r1UIUmLzelEldC7; TENANT=BSS; BSS_SID=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6ImQxZWI3YWU1LTllNmUtNGMxNi04ZjM1LTVlYWJhOGNiYzMyZCJ9.eyJleHAiOjE3MTM5NjkyOTgsImlhdCI6MTcxMzk2NzQ5OCwiaXNzIjoia2V2bGFyIiwianRpIjoiN2VlOWQ5ZDctMDZkMS00YzRmLTliY2EtYThlYzRjY2I1N2YxIiwidHlwZSI6IkFUIiwiZElkIjoiY2x0ZnN4bG1oNjljajB4MDgwa283MXB2NyIsImJJZCI6IkswRlVIVCIsImtldklkIjoiVkk4RTRENTA0MEQwQjA0MDZFQjVGOEVFREU1OTk3NzU3NiIsInRJZCI6ImFkc191aSIsImVhSWQiOiJXMHlCbURjN01OVzd1VzBqN1JfYWZKTHYtdGxsMmw5bm4taGw2SU5xR2xnPSIsInZzIjoiTEkiLCJ6IjoiQ0giLCJtIjpmYWxzZSwiZ2VuIjo0fQ.yxcoHC_vNwLnQoc03O7xATOb-dkIiNjxjfAVJGXOjHI; BSS_UDT=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImFzaHV0b3NoLnNodWtsYUB0cmFpbHl0aWNzLmNvbSIsImZpcnN0TmFtZSI6IkFzaHV0b3NoIFNodWtsYSIsIm1vYmlsZSI6Ijg5NjI2MzA3ODEiLCJzdGF0ZSI6IlZFUklGSUVEIiwidmFsaWRTZXNzaW9uIjp0cnVlLCJ0ZW5hbnQiOiJCU1MiLCJpYXQiOjE3MTM5Njc0OTgsImV4cCI6MTcxMzk2ODA5OH0.eWukjm31MdY9whxJ5j7mS_Xze5NkXdMP7RYg2dvObiQ; _ga_ZPGRNTNNRT=GS1.1.1713967498.22.1.1713967526.0.0.0; nonce=ss-2575131102',
+    'Origin': 'https://advertising.flipkart.com',
+    'Referer': 'https://advertising.flipkart.com/ad-account/campaigns/pca/BEN3ALHQBTDF/edit?baccount=org-9J4HV93IJV&aaccount=4616HEEMH03Q',
+    'Sec-Fetch-Dest': 'empty',
+    'Sec-Fetch-Mode': 'cors',
+    'Sec-Fetch-Site': 'same-origin',
+    'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36',
+    'accept': '*/*',
+    'apollographql-client-name': 'Flipkart-Ads',
+    'apollographql-client-version': '1.0.0',
+    'content-type': 'application/json',
+    'downlink': '10',
+    'dpr': '1',
+    'sec-ch-ua': '"Chromium";v="124", "Google Chrome";v="124", "Not-A.Brand";v="99"',
+    'sec-ch-ua-mobile': '?0',
+    'sec-ch-ua-platform': '"Windows"',
+    'viewport-width': '952',
+    'x-aaccount': '4616HEEMH03Q',
+    'x-baccount': 'org-9J4HV93IJV',
+    'x-csrf-token': 'rdDwmcbK-GeS0iWnVKegat0mQgXdyHL3FAQ8',
+    'x-sourceurl': 'https://advertising.flipkart.com/ad-account/campaigns/pca/BEN3ALHQBTDF/edit?baccount=org-9J4HV93IJV&aaccount=4616HEEMH03Q',
+    'x-tenant': 'BSS',
     }
 
+    json_data = {
+    'operationName': 'GetCampaign',
+    'variables': {
+        'seller': False,
+        'adProduct': 'BRAND_PCA',
+        'id': campaign_id_pca,
+    },
+    'query': 'query GetCampaign($id: String!, $adProduct: AdProductEnum!, $seller: Boolean! = false) {\n  getCampaignForId(id: $id, adProduct: $adProduct) {\n    ... on CampaignPLAResponse {\n      campaignInfo {\n        id\n        type\n        name\n        status\n        uiStatus\n        currency\n        paymentType\n        budget\n        budgetType\n        fsnIds\n        startDate\n        endDate\n        costModel\n        marketplace\n        pacing\n        withPreferredSellers\n        preferredSellerIds\n        preferredSellerNames\n        businessZones\n        tillBudgetEnds\n        fsnMeta {\n          id\n          title\n          image\n          minListingPrice\n          maxListingPrice\n          listingCurrency\n          brand\n          storeList\n          __typename\n        }\n        __typename\n      }\n      adGroups {\n        id\n        name\n        status\n        productCount\n        commodityId\n        cost\n        budget\n        targeting {\n          type\n          pages\n          excludeKeywords {\n            q\n            r\n            __typename\n          }\n          includeKeywords {\n            q\n            r\n            matchType\n            __typename\n          }\n          __typename\n        }\n        storePaths\n        fsnBanners {\n          id\n          fsnId\n          __typename\n        }\n        costVariation {\n          ...PlacementsFragment\n          __typename\n        }\n        __typename\n      }\n      brandIds\n      preferredSellers {\n        alias\n        sellerId\n        __typename\n      }\n      placementsMetaInfo {\n        ...PlacementsMetaInfoFragement\n        __typename\n      }\n      __typename\n    }\n    ... on CampaignPCAResponse {\n      campaignInfo {\n        id\n        type\n        name\n        status\n        uiStatus\n        currency\n        paymentType\n        budget\n        budgetType\n        startDate\n        endDate\n        costModel\n        marketplace\n        __typename\n      }\n      adGroups {\n        id\n        name\n        status\n        uiStatus\n        startDate\n        endDate\n        cost\n        budget\n        excludeKeywords\n        marketplace\n        showAdInBroadMatchStores\n        costVariation {\n          ...PlacementsFragment\n          __typename\n        }\n        allowedActions\n        pacing\n        targeting {\n          type\n          pages\n          excludeKeywords {\n            q\n            r\n            __typename\n          }\n          includeKeywords {\n            q\n            r\n            matchType\n            __typename\n          }\n          __typename\n        }\n        contents {\n          contentId\n          creativeBanners {\n            creativeId\n            creativeName\n            creativeTemplateId\n            uiStatus\n            status\n            allowedActions\n            referenceId\n            mediaId\n            creativeType\n            assets {\n              macro\n              value\n              type\n              origin\n              assetId\n              subAssets {\n                macro\n                value\n                type\n                __typename\n              }\n              __typename\n            }\n            isSelected\n            id\n            language\n            __typename\n          }\n          collectionUrl\n          landingPageUrl\n          collectionId\n          collectionType\n          brands\n          stores {\n            storeId\n            storeName\n            __typename\n          }\n          rejectedCount\n          isPreferredSeller\n          creativeTemplateId\n          __typename\n        }\n        __typename\n      }\n      brandIds\n      placementsMetaInfo {\n        ...PlacementsMetaInfoFragement\n        __typename\n      }\n      __typename\n    }\n    ... on CampaignDisplayAdsResponse {\n      campaignInfo {\n        id\n        type\n        name\n        status\n        uiStatus\n        currency\n        paymentType\n        budget\n        startDate\n        endDate\n        costModel\n        marketplace\n        pacing\n        budgetType\n        adFormat\n        publisher\n        __typename\n      }\n      adGroups {\n        id\n        name\n        status\n        uiStatus\n        startDate\n        endDate\n        cost\n        budget\n        allowedActions\n        marketplace\n        pacing\n        contents {\n          contentId\n          creativeBanners {\n            creativeId\n            creativeName\n            uiStatus\n            status\n            allowedActions\n            referenceId\n            mediaId\n            videoMediaStatus\n            creativeType\n            assets {\n              macro\n              value\n              type\n              origin\n              subAssets {\n                macro\n                value\n                type\n                __typename\n              }\n              isSystemAsset\n              __typename\n            }\n            isSelected\n            id\n            __typename\n          }\n          collectionUrl\n          collectionId\n          collectionType\n          brands\n          stores {\n            storeId\n            storeName\n            __typename\n          }\n          rejectedCount\n          isUrlSystemCreated\n          landingPageUrl\n          status\n          isPreferredSeller\n          __typename\n        }\n        frequencyCapping {\n          interval\n          value\n          numberOfIntervals\n          __typename\n        }\n        customScheduling\n        channels\n        userTargetingExpression {\n          groupId\n          type\n          values\n          publisherSpecific\n          __typename\n        }\n        contextTargetingExpression {\n          groupId\n          type\n          values\n          publisherSpecific\n          __typename\n        }\n        __typename\n      }\n      brandIds\n      __typename\n    }\n    __typename\n  }\n  getAdAccountDetails @skip(if: $seller) {\n    marketplaceConfigurationResponse {\n      marketplaceList\n      __typename\n    }\n    __typename\n  }\n}\n\nfragment PlacementsFragment on CostVariationType {\n  placements {\n    absoluteCost\n    percentage\n    type\n    pageType\n    __typename\n  }\n  __typename\n}\n\nfragment PlacementsMetaInfoFragement on PlacementsMeta {\n  type\n  title\n  detail\n  pageType\n  __typename\n}\n',
+}
     response = requests.post('https://advertising.flipkart.com/api', cookies=cookies_x, headers=headers, json=json_data)
     print("status pca getcampaign",response.status_code)
     
     x = json.loads(response.text)
     
+    # print(x)
+    # exit()
 
     campaign_id_pca = x["data"]["getCampaignForId"]["campaignInfo"]["id"]
 # print(campaign_id)
@@ -344,7 +343,7 @@ for campaign_id_pca in campaign_ids_pca:
     
         
     for placement in placements:
-        percentage_change = 100 # frontend se pass hogea
+        percentage_change = -1 # frontend se pass hogea
         adjusted_absolute_cost = adjust_absolute_cost(placement['absoluteCost'], percentage_change)
 
         cursor.execute("UPDATE fk_pla_nivea SET Absolute_Cost = %s WHERE Campaign_ID = %s AND Placement_Type = %s;",
@@ -694,12 +693,12 @@ for campaign_id_pca in campaign_ids_pca:
     print("costVariation:", placement_dict)
     print("targeting:", targeting)
     
-    # for item in targeting:
-    #     if 'excludeKeywords' in item and item['excludeKeywords'] is not None:
-    #         item['excludeKeywords'] = [keyword for keyword in item['excludeKeywords'] if '__typename' not in keyword]
-    #     if 'includeKeywords' in item and item['includeKeywords'] is not None:
-    #         item['includeKeywords'] = [keyword for keyword in item['includeKeywords'] if '__typename' not in keyword]
-    # print("targeting:", targeting)
+    for item in targeting:
+        if 'excludeKeywords' in item and item['excludeKeywords'] is not None:
+            item['excludeKeywords'] = [keyword for keyword in item['excludeKeywords'] if '__typename' not in keyword]
+        if 'includeKeywords' in item and item['includeKeywords'] is not None:
+            item['includeKeywords'] = [keyword for keyword in item['includeKeywords'] if '__typename' not in keyword]
+    print("targeting:", targeting)
 
     print("campaign_budget:", campaign_budget)
     print("costModel:", campaign_costModel)
